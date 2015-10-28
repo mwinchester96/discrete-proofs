@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+% The \documentclass command picks a 'style' for the document. For now,
+% the "article" style should serve your purposes.
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% The \usepackage commands load extra commands and features (called
+% 'packages') for use in the document. These are safe to ignore;
+% but you can add additional packages if you need to as time goes on.
+
+\newtheorem*{claim}{Claim}
+\newtheorem*{theorem}{Theorem}
+
+% Tip: If you are getting frustrated with writing in LaTeX, try googling
+% "latex how to ..."
+% Many people have written very nice guides to introduce you to LaTeX.
+
+\linespread{1.2}
+
+\title{Portfolio 3, Problem 3}
+\author{Matt Winchester}
+
+% This ends the "preamble" of the source code. Whenever you are told to
+% add something to the 'preamble,' that means it goes *before* the
+% \begin{document} command.
+
+\setlength{\parindent}{0.0\parindent}
+
+\begin{document}
+
+\maketitle
+
+% This command tells LaTeX to create the title from the data of title and author set above.
+
+\textbf{Pledge}: \qquad \textbf{No Aid, No Violation.}
+
+% Don't forget to add your hand-written signature on the print out!
+
+\medskip
+
+\begin{claim}
+Let m and n be distinct positive integers, and let $N = m \times n$. Let
+$B := \{k \in Z : 1 \leq k \leq N,$ and at least one of m, n divides k $\}$.
+Prove that $\mid$B$\mid  <$ m + n.
+
+\end{claim}
+
+\medskip
+
+\textbf{Method}: We will prove this directly 
+\begin{proof}
+
+Because either m or n divides k, we may say that either $k = mc$ for some $c \in \mathbb{Z}$ or $k = nd$ for some $d \in \mathbb{Z}$. Because 
+$1 \leq k \leq N$ and $N = m \times n$, the maximum value for c is n and the maximum value for d is m. 
+If they were any higher, k would be greater than N. Therefore, the values for k when $k = mc$ for some $c \in \mathbb{Z}$ are:
+
+\[\{m \times 1, m \times 2, m \times 3... m \times n\}\]
+
+And the values for k when $k = nd$ for some $d \in \mathbb{Z}$ are:
+
+\[\{n \times 1, n \times 2, n \times 3... n \times m\}\]
+
+This is the best case because we are assuming that there is no overlap in between the sets of $mc$ and $nd$ except for when c = n and d = m, because $m \times n = n \times m$. 
+
+All of these values are unique except for the last values, $m \times n$. Therefore, in the best case, $\mid B \mid = m + n-1$. Because of this,  $\mid$B$\mid  <$ m + n.
+\end{proof}
+
+\end{document}
+
+

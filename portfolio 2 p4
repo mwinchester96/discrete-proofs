@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+
+% The \documentclass command picks a 'style' for the document. For now,
+% the "article" style should serve your purposes.
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% The \usepackage commands load extra commands and features (called
+% 'packages') for use in the document. These are safe to ignore;
+% but you can add additional packages if you need to as time goes on.
+
+\newtheorem*{claim}{Claim}
+\newtheorem*{theorem}{Theorem}
+
+% Tip: If you are getting frustrated with writing in LaTeX, try googling
+% "latex how to ..."
+% Many people have written very nice guides to introduce you to LaTeX.
+
+\linespread{1.2}
+
+\title{Portfolio 2, Problem 4}
+\author{Matt Winchester}
+
+% This ends the "preamble" of the source code. Whenever you are told to
+% add something to the 'preamble,' that means it goes *before* the
+% \begin{document} command.
+
+\setlength{\parindent}{0.0\parindent}
+
+\begin{document}
+
+\maketitle
+
+% This command tells LaTeX to create the title from the data of title and author set above.
+
+\textbf{Pledge}: \qquad \textbf{No Aid, No Violation.}
+
+% Don't forget to add your hand-written signature on the print out!
+
+\medskip
+
+\begin{claim}
+ Let S denote the set of natural numbers which are perfect squares, and define
+$A :=$  \{m \subseteq \mathbb{N} : 4  $\mid m$ or $4 \mid \(m - 1\)\}
+=$\{0, 1, 4, 5, 8, 9, . . . \}$.
+Prove that $S \subseteq A.
+\end{claim}
+
+\medskip
+
+\textbf{Method}: We will prove this directly 
+\begin{proof}
+Let $c \in \mathbb{N}$. Because we know that all natural numbers are either even or odd, we may say that $c = 2k$ or $c = 2k + 1$ for some $k \in \mathbb{N}$. Using the fact that a perfect square is equal to two equal integers multiplied by each other, we may say that all perfect squares fit into one of the following forms: \[ (2k)^2 = 4k^2\]  \[ (2k+1)^2 = 4k^2 + 4k + 1\]
+One can see that both of these form fit into the definition of the set A, where they are both natural numbers because $(2k)^2$ and $(2k+1)^2$ are both natural number because $k \in \mathbb{N}$. If we define these forms as some $b \in \mathbb{N}$, then either  $4 \mid b$ or $4 \mid (b-1)$ because $4k^2$ (which is b) is divisible by 4 because it is a natural number multiplied by 4. $4k^2 + 4k + 1 - 1$ (which is b-1)is also divisible by 4 because it is a natural number multiplied by 4. Because of this, we can say that every element in S is also in A, therefore $S \subseteq A$ 
+
+\end{proof}
+
+\end{document}
+
+

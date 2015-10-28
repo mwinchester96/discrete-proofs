@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+% The \documentclass command picks a 'style' for the document. For now,
+% the "article" style should serve your purposes.
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% The \usepackage commands load extra commands and features (called
+% 'packages') for use in the document. These are safe to ignore;
+% but you can add additional packages if you need to as time goes on.
+
+\newtheorem*{claim}{Claim}
+\newtheorem*{theorem}{Theorem}
+
+% Tip: If you are getting frustrated with writing in LaTeX, try googling
+% "latex how to ..."
+% Many people have written very nice guides to introduce you to LaTeX.
+
+\linespread{1.2}
+
+\title{Portfolio 3, Problem 1}
+\author{Matt Winchester}
+
+% This ends the "preamble" of the source code. Whenever you are told to
+% add something to the 'preamble,' that means it goes *before* the
+% \begin{document} command.
+
+\setlength{\parindent}{0.0\parindent}
+
+\begin{document}
+
+\maketitle
+
+% This command tells LaTeX to create the title from the data of title and author set above.
+
+\textbf{Pledge}: \qquad \textbf{No Aid, No Violation.}
+
+% Don't forget to add your hand-written signature on the print out!
+
+\medskip
+
+\begin{claim}
+The set difference of two sets, A and B, is defined as:
+\[A - B := \{x \in A : x \notin B\}\]
+Prove that for any sets A, B, and C,
+\[A - (B \cup C) = (A - B) \cap (A - C)\]
+\end{claim}
+
+\medskip
+
+\textbf{Method}: We will prove this by double containment 
+\begin{proof}
+
+Let $x \in A - (B \cup C)$, which means that $x \in A$ and $x \notin B \cup C$. Since $x \notin B \cup C$, we know that $x \notin B$ and $x \notin C$. Therefore, $x \in A$, $x \notin B$ and $x \notin C$.
+\medskip
+
+
+If we look at the right hand side of the claim, we can re express the statement $(A - B) \cap (A - C)$ as: 
+\[\{x \in A : x \notin B\} \cap \{x \in A : x \notin C\}\]
+Which is equivalent to the set: 
+\[\{x \in A : x \notin B : x \notin C\}\] 
+This is because the intersection takes only the x where all of the parameters are met in both sets. 
+
+Therefore, 
+\[A - (B \cup C) \subseteq (A - B) \cap (A - C)\]
+
+If we first look at the right side, we let
+\[\{y \in A : y \notin B\} \cap \{y \in A : y \notin C\}\]
+
+Because of this, $y \in A$ and $y \notin B,C$. Taking this to the statement on the left, we have 
+
+\[y \in A - (B \cup C)\]
+
+Which means $y \in A$ and $y \notin B \cup C$, which means $y \notin B$ and $y \notin C$. 
+
+Given these sets, \[(A - B) \cap (A - C) \subseteq A - (B \cup C)\]
+
+Because 
+\[(A - B) \cap (A - C) \subseteq A - (B \cup C)\]
+and 
+\[A - (B \cup C) \subseteq (A - B) \cap (A - C)\]
+then 
+\[A - (B \cup C) = (A - B) \cap (A - C)\]
+by double containment.
+
+
+
+
+\end{proof}
+
+\end{document}
+
+
